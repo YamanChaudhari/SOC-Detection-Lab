@@ -1,0 +1,14 @@
+Query:
+
+index=* EventCode=1 (Image="*whoami.exe" OR Image="*systeminfo.exe" OR Image="*ipconfig.exe" OR Image="*reg.exe")
+| table _time User ParentImage Image CommandLine
+| sort - _time
+
+Purpose:
+Detect reconnaissance and discovery activity.
+
+ATT&CK:
+T1033 - User Discovery
+T1082 - System Information Discovery
+T1016 - Network Configuration Discovery
+T1112 - Registry Activity

@@ -1,0 +1,11 @@
+Query:
+
+index=* EventCode=1 Image="*powershell.exe"
+| table _time User ParentImage Image CommandLine
+| sort - _time
+
+Purpose:
+Detect PowerShell execution activity.
+
+ATT&CK:
+T1059.001 - PowerShell

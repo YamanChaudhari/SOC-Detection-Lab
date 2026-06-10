@@ -1,0 +1,37 @@
+SOC Dashboard v1
+
+Purpose:
+Monitor endpoint activity using Sysmon logs collected in Splunk.
+
+Dashboard Panels:
+1. Top Processes
+   - Displays the most frequently executed processes.
+
+2. PowerShell Activity
+   - Monitors PowerShell execution and command lines.
+
+3. Reconnaissance Activity
+   - Detects discovery commands such as:
+     whoami.exe
+     systeminfo.exe
+     ipconfig.exe
+     reg.exe
+
+4. Registry Activity
+   - Monitors registry queries and modifications.
+
+5. Network Activity
+   - Displays Sysmon Event ID 3 network connections.
+
+Tools Used:
+- Splunk Enterprise
+- Sysmon
+- Universal Forwarder
+- Atomic Red Team
+
+ATT&CK Techniques:
+- T1033
+- T1082
+- T1016
+- T1112
+- T1059.001

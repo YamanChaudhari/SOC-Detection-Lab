@@ -1,0 +1,11 @@
+Query:
+
+source="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=3
+| table _time Image DestinationIp DestinationPort Protocol
+| sort - _time
+
+Purpose:
+Monitor network connections.
+
+Sysmon:
+Event ID 3 - Network Connection

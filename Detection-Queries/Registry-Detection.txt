@@ -1,0 +1,11 @@
+Query:
+
+index=* EventCode=1 Image="*reg.exe"
+| table _time User ParentImage Image CommandLine
+| sort - _time
+
+Purpose:
+Monitor registry activity.
+
+ATT&CK:
+T1112 - Modify Registry
